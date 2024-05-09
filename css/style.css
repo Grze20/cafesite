@@ -1,0 +1,235 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 144px;
+}
+body{
+  font-family: "Metal", serif;
+  font-style: normal;
+  color: black;
+  
+}
+
+.header{
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0.5rem 0.1rem 3rem -0.5rem #888888;
+}
+
+.header_navbar{
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.header_navbar img{
+  position: relative;  
+  bottom: 10px;
+}
+.header_navbar li{
+  padding: 1.5rem;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+.header_navbar li a{
+  text-decoration:none;
+  color:black;
+}
+.banner{
+  background: url("../img/banner_fullscreen.jpg") no-repeat;
+  background-size: cover;
+  height: 70rem;
+
+}
+
+#about-us p{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto 5rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+#about-us h1{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 3rem;
+  padding: 1.3rem;
+}
+.section-header{
+  margin-top: 20%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#products-gallery{
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+  flex-wrap:wrap;
+  margin-top: 3rem;
+}
+#products-gallery li{
+  list-style-type: none;
+}
+.product img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+ }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.product-description{
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.product{
+  max-height: 380px;
+  max-width: 280px;
+  margin: 15px;
+  position: relative;
+}
+.product:hover .overlay {
+  opacity: 0.5;
+}
+.christmas-offer-list{
+  list-style: circle;
+}
+.christmas-offer-list li{
+  display: flex;
+  justify-content:flex-start;
+  align-content: center;
+  margin-left: 5rem;
+  font-size: 1.3rem;
+}
+.christmas-offer-box p{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: justify;
+  margin: auto 5rem;
+}
+.christmas-offer-header3{
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-left: 5rem;
+}
+#contact-box{
+  display: flex;
+  justify-content: center;
+}
+#contact-box p{
+  margin: auto 30px;
+  font-size: 1.3rem;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column wrap;
+  margin-top: 3rem;
+  background-color: #615f5ff8;
+  height: 300px;
+}
+footer p{
+  font-size: 1.4rem;
+}
+footer ul{
+  display: inline-flex;
+  list-style: none;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.fa-brands{
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+.fa-youtube:hover{
+  font-size: 3rem;
+  color: red;
+}
+.fa-facebook:hover{
+  font-size: 3rem;
+  color: blue;
+}
+.fa-instagram:hover{
+  font-size: 3rem;
+  color: rgb(255, 21, 165);
+}
+@media screen and (max-width:767px){
+  .header_navbar{
+    display: block;
+    text-align: center;
+  }
+  .banner{
+    background: url("../img/banner_phone.jpg") no-repeat;
+    background-size: contain;
+  }
+  .christmas-offer-list li{
+    justify-content:center;
+    margin-left: auto;
+  }
+  .christmas-offer-header3{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+  }
+  .header_navbar img{
+    bottom: 0;
+    top: 3rem;
+    left: 5px;
+  }
+  footer p{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width:768px){
+  .header{
+    position: sticky;
+  }
+  #about-us h1{
+    margin-top: 15%;
+  }
+}
+@media screen and (min-width:1010px){
+  .header_navbar img{
+    right: 5rem;
+  }
+}
+@media screen and (max-width: 662px) {
+  #contact-box{
+    flex-wrap: wrap;
+  }
+  #contact-box img{
+    padding: 30px ;
+    margin: auto;
+  }
+}
